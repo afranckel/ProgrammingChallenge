@@ -24,7 +24,7 @@ public class BusinessCardParser {
         return (matcher.find() && matcher.group().equals(s));
     }
 
-    //method to 
+    //Method to get contact information 
     ContactInfo getContactInfo(String document) {
         //separate String into Strings by new line 
         String[] businessInfo = document.split("\\r?\\n");
