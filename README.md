@@ -1,26 +1,27 @@
-How to Compile and Run My Solution
+How to Build and Run My Solution
 
 Requirements:
-This project requries a Java Development Kit (JDK) version 8 or above and may be compiled and run on a Windows or Mac OS Xthrough the
-command prompt/terminal or through an IDE that you may use such as NetBeans or Eclipse.
+This project requries a Java Development Kit (JDK) version 8 or above and may be compiled and run on a Windows or Mac OS X through the
+Command Prompt or Terminal or through an IDE that you may use such as NetBeans or Eclipse.
 For more information on downloading and installing Java 8 go to the https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
-To check which version of Java you have on your Windows Computer:
+To check which version of Java you have on a Windows Computer:
 1. Open the Command Prompt
 2. Type java -version and click enter
 
 
-The version of Java on your computer should show on the command prompt
-To check which version of Java is on your Mac OS X:
+The version of Java on your computer should show on the Command Prompt
+
+To check which version of Java is on a Mac OS X:
 1. Open Terminal
 2. Type java -version and click enter
 
 
 The version of Java on your computer should show in the Terminal Window
 
-Running my solution through the command prompt on Windows computer:
+Running my solution through the command prompt on a Windows computer:
 1. Download the zip file on GitHub by clicking "Clone and Download" then, "Download ZIP"
-2. Open the zip file and to access the files double click Programming Challenge-master ->src
+2. Open the zip file and to access the files double click ProgrammingChallenge-master ->src
 -> contacts and you should see BusinessCardParser.java, ContactInfo.java, and ParsingBusinessCardsTest.java
 2. Inside each class delete "package contacts;"
 3. Open the Command Prompt
@@ -35,9 +36,9 @@ C:\Users\username\Documents>
 C:\Users\username\Documents> javac PasingBusinessCardsTest.java
 C:\Users\username\Documents> java ParsingBusinessCardsTest
 
-Running my solution through the command prompt on Mac OS X:
+Running my solution through Terminal on a Mac OS X:
 1. Download the zip file on GitHub by clicking "Clone and Download" then, "Download ZIP"
-2. Open the zip file and to access the files double click Programming Challenge-master ->src
+2. Open the zip file and to access the files double click ProgrammingChallenge-master ->src
 -> contacts and you should see BusinessCardParser.java, ContactInfo.java, and ParsingBusinessCardsTest.java
 2. Inside each class delete "package contacts;"
 3. Open the Terminal Window
@@ -47,3 +48,7 @@ machine:~ userName$ cd Documents
 5. Compile and Run the ParsingBusinessCardsTest.java class: 
 machine:~ Documents userName$ javac PasingBusinessCardsTest.java
 machine:~ Documents userName$ java PasingBusinessCardsTest
+
+Running my solution through an IDE (such as NetBeans and Eclipse)
+Depending on which IDE you personally use, you would import the project into your IDE through cloning or downloading the zip file from GitHub.  Visit your IDE's website for more information on integrating GitHub with your IDE.
+
