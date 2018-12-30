@@ -21,7 +21,7 @@ public class ParsingBusinessCardsTest {
                 + "Columbia, MD 12345\n"
                 + "Phone: 410-555-1234\n"
                 + "Fax: 410-555-4321\n"
-                + "Jane.doe@acmetech.com";
+                + "jane.doe@acmetech.com";
         String thirdEntry = "Bob Smith\n"
                 + "Software Engineer\n"
                 + "Decision & Security Technologies\n"
@@ -38,19 +38,11 @@ public class ParsingBusinessCardsTest {
         ContactInfo infoThree = parser.getContactInfo(thirdEntry);
 
         //Print out first test case
-        System.out.println("Name: " + info.getName());
-        System.out.println("Phone: " + info.getPhoneNumber());
-        System.out.println("Email: " + info.getEmailAddress());
-
+        System.out.println(info.toString());
         //Print out second test case
-        System.out.println("\n" + "Name: " + infoTwo.getName());
-        System.out.println("Phone: " + infoTwo.getPhoneNumber());
-        System.out.println("Email: " + infoTwo.getEmailAddress());
-
+        System.out.println(infoTwo.toString());
         //Print out third test case
-        System.out.println("\n" + "Name: " + infoThree.getName());
-        System.out.println("Phone: " + infoThree.getPhoneNumber());
-        System.out.println("Email: " + infoThree.getEmailAddress());
+        System.out.println(infoThree.toString());
     }
 
 }
