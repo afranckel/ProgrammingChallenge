@@ -1,6 +1,6 @@
 /*
  * This class (ParsingBusinessCardsTest.java) is my tester class.  This class
- * provides test cases to ensure that all my information going into a contact list
+ * provides test cases to ensure that all the information going into a contact list
  * is correct.  Each entry is then printed as output to the console.
  */
 package contacts;
@@ -32,22 +32,22 @@ public class ParsingBusinessCardsTest {
                 + "Tel: +1 (703) 555-1259\n"
                 + "Fax: +1 (703) 555-1200\n"
                 + "bsmith@abctech.com";
-        //create objects that contain contact info
+        //Create objects that contain contact info
         ContactInfo info = parser.getContactInfo(firstEntry);
         ContactInfo infoTwo = parser.getContactInfo(secondEntry);
         ContactInfo infoThree = parser.getContactInfo(thirdEntry);
 
-        //print out first test case
+        //Print out first test case
         System.out.println("Name: " + info.getName());
         System.out.println("Phone: " + info.getPhoneNumber());
         System.out.println("Email: " + info.getEmailAddress());
 
-        //print out second test case
+        //Print out second test case
         System.out.println("\n" + "Name: " + infoTwo.getName());
         System.out.println("Phone: " + infoTwo.getPhoneNumber());
         System.out.println("Email: " + infoTwo.getEmailAddress());
 
-        //print out third test case
+        //Print out third test case
         System.out.println("\n" + "Name: " + infoThree.getName());
         System.out.println("Phone: " + infoThree.getPhoneNumber());
         System.out.println("Email: " + infoThree.getEmailAddress());
