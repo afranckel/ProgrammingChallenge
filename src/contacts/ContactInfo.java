@@ -33,6 +33,7 @@ public class ContactInfo {
     String getEmailAddress() {
         return email;
     }
+    //toString() method to return information for each contact
     public String toString(){
         return "Name: " + name + "\n" + "Phone: " + phoneNum + "\n" + "Email: " + email + "\n";
     }
