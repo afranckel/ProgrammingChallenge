@@ -4,7 +4,7 @@
  * This class also contains getter methods which as used to get information from an object
  * of this class.
  */
-package contacts;
+
 
 public class ContactInfo {
 
