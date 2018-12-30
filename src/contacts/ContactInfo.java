@@ -8,9 +8,9 @@ package contacts;
 
 public class ContactInfo {
 
-    String name;
-    String phoneNum;
-    String email;
+   private String name;
+   private String phoneNum;
+   private String email;
 
     //Constructor containing name, phone number, and email
     ContactInfo(String name, String phoneNum, String email) {
@@ -32,5 +32,8 @@ public class ContactInfo {
     //Returns the email address of contact
     String getEmailAddress() {
         return email;
+    }
+    public String toString(){
+        return "Name: " + name + "\n" + "Phone: " + phoneNum + "\n" + "Email: " + email + "\n";
     }
 }
