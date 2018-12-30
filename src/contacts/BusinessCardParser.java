@@ -4,7 +4,7 @@
  * ContactInfo class is instantiated with the name, phone number, and email address for each
  * person and is returned by the getContactInfo() method.
  */
-package contacts;
+
 
 import java.util.ArrayList;
 import java.util.regex.*;
