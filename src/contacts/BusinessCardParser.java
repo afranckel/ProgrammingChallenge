@@ -29,38 +29,38 @@ public class BusinessCardParser {
         //separate String into Strings by new line 
         String[] businessInfo = document.split("\\r?\\n");
         for (String line : businessInfo) {
-            //if a phone number is in required pattern
+            //If the line is in the required pattern, it is a phone number
             if (isValidPhoneNum(line)) {
                 phone = line.replaceAll("[\\s\\-()]", "");
             }
-            //if a phone number that contains "Tel"
+            //If the line that contains "Tel," it is a phone number
             if (line.startsWith("Tel")) {
                 phone = line.replaceAll("Tel: ", "").replaceAll("[\\s\\-()+]", "");
 
             }
-            //if a phone number that contains "Phone"
+            //If the line that contains "Phone," it is a phone number
             if (line.startsWith("Phone")) {
                 phone = line.replaceAll("Phone:", "").replaceAll("[\\s\\-()]", "");
             }
-            //if line is an e-mail
+            //If line contains "@," it is an email
             if (line.contains("@")) {
                 email = line;
             }
-            //add all other Strings/lines to an ArrayList
+            //Add all other lines to an ArrayList
             if (!isValidPhoneNum(line) && !line.contains("Tel") && !line.contains("Phone") && !line.contains("@")) {
                 arr.add(line);
             }
         }
-        //parse through all other Strings/lines
+        //Parse through all other lines
         for (String s : arr) {
-            //split the line into two words in a String array
+            //Split the line into two words in a String array
             String[] str = s.split(" ");
-            //if the email contains the full second word (a last name) then the whole line is the name
+            //If the email contains the full second word (a last name), then the whole line is the name
             if (email.contains(str[1].toLowerCase())) {
                 name = s;
             }
         }
-        //create an object containing contact info for person to be added to contact list
+        //Create an object containing contact info for each person to be added to contact list
         ContactInfo info = new ContactInfo(name, phone, email);
         return info;
     }
