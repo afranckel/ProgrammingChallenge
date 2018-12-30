@@ -33,6 +33,7 @@ C:\Users\username>cd C:\Users\username\Documents
 C:\Users\username\Documents>
 
 6. Compile and Run the ParsingBusinessCardsTest.java class:
+
 C:\Users\username\Documents> javac PasingBusinessCardsTest.java
 C:\Users\username\Documents> java ParsingBusinessCardsTest
 
@@ -46,6 +47,7 @@ Running my solution through Terminal on a Mac OS X:
 For example, if all three of the classes are located in your Documents folder:
 machine:~ userName$ cd Documents
 6. Compile and Run the ParsingBusinessCardsTest.java class: 
+
 machine:~ Documents userName$ javac PasingBusinessCardsTest.java
 machine:~ Documents userName$ java PasingBusinessCardsTest
 
