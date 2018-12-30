@@ -1,7 +1,7 @@
 /*
- * This class (ContactInfo.java) defines objects of this class through using a
+ * This class (ContactInfo.java) defines a
  * constructor which contains all information required (name, phone number, and email).
- * This class also contains getter method which as used to get information from an object
+ * This class also contains getter methods which as used to get information from an object
  * of this class.
  */
 package contacts;
@@ -19,17 +19,17 @@ public class ContactInfo {
         this.email = email;
     }
 
-    //returns the name of contact
+    //Returns the name of contact
     String getName() {
         return name;
     }
 
-    //returns the phone number of contact
+    //Returns the phone number of contact
     String getPhoneNumber() {
         return phoneNum;
     }
 
-    //returns the email address of contact
+    //Returns the email address of contact
     String getEmailAddress() {
         return email;
     }
