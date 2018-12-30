@@ -11,13 +11,8 @@ import java.util.regex.*;
 
 public class BusinessCardParser {
 
-    String email;
-    String phone;
-    String name;
-    ArrayList<String> arr = new ArrayList<>();
-
     //Verification of the pattern of the first phone number (410)555-1234
-    public static boolean isValidPhoneNum(String s) {
+    private static boolean isValidPhoneNum(String s) {
         Pattern numPattern = Pattern.compile("\\(\\d{3}\\)\\d{3}-?\\d{4}");
 
         Matcher matcher = numPattern.matcher(s);
@@ -26,28 +21,31 @@ public class BusinessCardParser {
 
     //Method to get contact information 
     ContactInfo getContactInfo(String document) {
+        String email = "Unknown";
+        String phone = "Unknown";
+        String name = "Unknown";
+        ArrayList<String> arr = new ArrayList<>();
+        if (document == null) {
+            return null;
+        }
         //separate String into Strings by new line 
         String[] businessInfo = document.split("\\r?\\n");
         for (String line : businessInfo) {
             //If the line is in the required pattern, it is a phone number
             if (isValidPhoneNum(line)) {
                 phone = line.replaceAll("[\\s\\-()]", "");
-            }
-            //If the line that contains "Tel," it is a phone number
-            if (line.startsWith("Tel")) {
-                phone = line.replaceAll("Tel: ", "").replaceAll("[\\s\\-()+]", "");
+            } //If the line that contains "Tel," it is a phone number
+            else if (line.startsWith("Tel:")) {
+                phone = line.replaceAll("Tel:", "").replaceAll("[\\s\\-()+]", "");
 
-            }
-            //If the line that contains "Phone," it is a phone number
-            if (line.startsWith("Phone")) {
+            } //If the line that contains "Phone," it is a phone number
+            else if (line.startsWith("Phone:")) {
                 phone = line.replaceAll("Phone:", "").replaceAll("[\\s\\-()]", "");
-            }
-            //If line contains "@," it is an email
-            if (line.contains("@")) {
+            } //If line contains "@," it is an email
+            else if (line.contains("@")) {
                 email = line;
-            }
-            //Add all other lines to an ArrayList
-            if (!isValidPhoneNum(line) && !line.contains("Tel") && !line.contains("Phone") && !line.contains("@")) {
+            } //Add all other lines to an ArrayList
+            else {
                 arr.add(line);
             }
         }
