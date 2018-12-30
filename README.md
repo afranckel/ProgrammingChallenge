@@ -45,7 +45,9 @@ Running my solution through Terminal on a Mac OS X:
 4. Open the Terminal Window
 5. Navigate to the location of all 3 files on your computer 
 For example, if all three of the classes are located in your Documents folder:
+
 machine:~ userName$ cd Documents
+
 6. Compile and Run the ParsingBusinessCardsTest.java class: 
 
 machine:~ Documents userName$ javac PasingBusinessCardsTest.java
