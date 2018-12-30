@@ -13,7 +13,7 @@ public class BusinessCardParser {
 
     //Verification of the pattern of the first phone number (410)555-1234
     private static boolean isValidPhoneNum(String s) {
-        Pattern numPattern = Pattern.compile("\\(\\d{3}\\)\\d{3}-?\\d{4}");
+        Pattern numPattern = Pattern.compile("\\(\\d{3}\\)\\d{3}-\\d{4}");
 
         Matcher matcher = numPattern.matcher(s);
         return (matcher.find() && matcher.group().equals(s));
