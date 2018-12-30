@@ -3,7 +3,7 @@
  * provides test cases to ensure that all the information going into a contact list
  * is correct.  Each entry is then printed as output to the console.
  */
-package contacts;
+
 
 public class ParsingBusinessCardsTest {
 
